@@ -19,7 +19,14 @@ Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScr
 
 ## Gallery
 
-
+## Gallery
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="images/fractal.png" alt="Fractal 0" width="200">
+  <img src="images/fractal(1).png" alt="Fractal 1" width="200">
+  <img src="images/fractal(2).png" alt="Fractal 2" width="200">
+  <img src="images/fractal(3).png" alt="Fractal 3" width="200">
+  <img src="images/fractal(4).png" alt="Fractal 4" width="200">
+</div>
 *Images generated with Fractal Lab.*
 
 ---
