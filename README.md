@@ -1,6 +1,6 @@
 # Fractal Lab 🌌
 
-Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScript. It allows you to explore multiple fractals like the **Mandelbrot set**, **Burning Ship**, and custom fractals with smooth zooming, panning, and high-quality rendering.
+Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScript. It allows you to explore multiple fractals like the **Mandelbrot set**, **Burning Ship**, and a custom **Turtle** shaped fractal I found while making this project.
 
 ![Fractal Lab Screenshot](images/screenshot.png)
 
@@ -18,15 +18,15 @@ Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScr
 ---
 
 ## Gallery
-
-## Gallery
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="images/fractal.png" alt="Fractal 0" width="200">
-  <img src="images/fractal(1).png" alt="Fractal 1" width="200">
-  <img src="images/fractal(2).png" alt="Fractal 2" width="200">
-  <img src="images/fractal(3).png" alt="Fractal 3" width="200">
-  <img src="images/fractal(4).png" alt="Fractal 4" width="200">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="images/fractal.png" alt="Fractal 0" style="width: 32%;">
+  <img src="images/fractal(1).png" alt="Fractal 1" style="width: 32%;">
+  <img src="images/fractal(2).png" alt="Fractal 2" style="width: 32%;">
+  <img src="images/fractal(3).png" alt="Fractal 3" style="width: 32%;">
+  <img src="images/fractal(4).png" alt="Fractal 4" style="width: 32%;">
+  <img src="images/fractal(5).png" alt="Fractal 5" style="width: 32%;">
 </div>
+
 *Images generated with Fractal Lab.*
 
 ---
@@ -74,4 +74,4 @@ Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScr
 * **Zoom In / Out:** Use the `+` and `-` buttons or mouse wheel
 * **Pan:** Click and drag the fractal
 * **Reset View:** Reset zoom and offsets
-* **Export Image:** Save a high-resolution PNG of the current view
+* **Export Image:** Save a high-resolution PNG of the current view (NOTE: this feature works a bit slow at the moment so it tends to take time to render and download the image)
