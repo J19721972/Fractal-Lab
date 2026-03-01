@@ -2,7 +2,7 @@
 
 Fractal Lab is an interactive fractal explorer built with HTML, CSS, and JavaScript. It allows you to explore multiple fractals like the **Mandelbrot set**, **Burning Ship**, and custom fractals with smooth zooming, panning, and high-quality rendering.
 
-![Fractal Lab Preview](https://user-images.githubusercontent.com/placeholder/fractal-preview.png)
+![Fractal Lab Screenshot](images/screenshot.png)
 
 ---
 
