@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Fractal Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <main id="viewport">
+            <canvas id="mainCanvas" width="1000" height="1000"></canvas>
+            
+            <aside id="controls">
+                <header>
+                    <h1>Fractal <span class="accent">Lab</span></h1>
+                </header>
+                
+                <section class="control-group">
+                    <label>Fractal Type</label>
+                    <select id="fractalSelect">
+                        <option value="0">Mandelbrot Set</option>
+                        <option value="1">Burning Ship</option>
+                        <option value="2">Turtles</option>
+                    </select>
+                </section>
+
+                <section class="control-group">
+                    <label>Navigation</label>
+                    <div class="button-row">
+                        <button class="btn-icon" onclick="lessZoom()" title="Zoom In">+</button>
+                        <button class="btn-icon" onclick="moreZoom()" title="Zoom Out">-</button>
+                    </div>
+                </section>
+
+                <section class="actions">
+                    <button id="resetButton" class="btn-secondary" onclick="reset()">Reset View</button>
+                    <button id="screenshotButton" class="btn-primary" onclick="screenshot()">Export Image</button>
+                </section>
+            </aside>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

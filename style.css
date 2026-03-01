@@ -1,0 +1,205 @@
+:root {
+    --bg-color: #050505;
+    --panel-bg: rgba(18, 18, 20, 0.9);
+    --accent-color: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.3);
+    --text-main: #ffffff;
+    --text-dim: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-blur: 16px;
+    --radius-lg: 1.25rem;
+    --radius-md: 0.75rem;
+    color-scheme: dark; /* Fuerza al navegador a usar controles nativos oscuros */
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-main);
+    overflow: hidden;
+    height: 100vh;
+}
+
+#viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: radial-gradient(circle at center, #111115 0%, #050505 100%);
+}
+
+#mainCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 850px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 80px -20px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--border-color);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Panel Flotante Moderno */
+#controls {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 300px;
+    background: var(--panel-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+.accent {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+}
+
+/* Rediseño del Select y el Desplegable */
+select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: none; /* Quitamos la flecha nativa fea */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='C19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+select:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+}
+
+select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+/* Estilo para las opciones (Limitado por el navegador, pero optimizado) */
+select option {
+    background-color: #1a1a1c; /* Color sólido para el menú desplegado */
+    color: white;
+    padding: 10px;
+}
+
+/* Botones y Acciones */
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.btn-icon {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+    height: 48px;
+}
+
+.btn-icon:hover {
+    background: var(--accent-color);
+    border-color: transparent;
+}
+
+/* Responsive: Panel inferior en móviles */
+@media (max-width: 768px) {
+    #controls {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    }
+
+    #mainCanvas {
+        max-width: 90%;
+        margin-top: -20vh;
+    }
+}
